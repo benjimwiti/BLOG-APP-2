@@ -1,0 +1,301 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+body{
+  transition: all 1s;
+  background-color: black;
+}
+
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: right;
+  align-items: center;
+  font-size: 2rem;
+  background-color: white;
+  height: 50px;
+  padding: 0 10%;
+
+}
+
+.p-el {
+  font-size: 3rem;
+  border-radius: 20px 20px 0 0;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+  background-color: rgb(228, 227, 227);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  &:hover{
+    color: rgba(0, 0, 0, 0.836);
+  }
+  &:focus {
+    outline: 1px solid black;
+  }
+}
+
+a:hover {
+  color: blue;
+}
+
+.create-post-page-area{ 
+  width: fit-content;
+  width: clamp(600px, 80vw, 920px);
+  margin: 8rem auto;
+}
+.create-blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px ;
+  width: inherit;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 0px 2px 3px 2px whitesmoke;
+}
+
+.title-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: inherit;
+  padding: 0 1.5rem;
+  flex-grow: 1;
+}
+
+.blog-text {
+  display: flex;
+  flex-flow: column nowrap;
+  width: inherit;
+  padding: 0 1.5rem;
+  flex-grow: 4;
+  overflow-y: auto;
+  
+}
+.home-blog-text {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgba(245, 245, 245, 0.24);
+  margin: 0.5rem 0;
+  height: 220px;
+}
+.create-blog-textarea{
+  flex-grow: 2;
+  margin: 1rem 0;
+  padding: 4px;
+  &:focus-within{
+    outline: none ;
+  }
+}
+.create-blog-title-text{
+  &:focus-within{
+    outline: none ;
+  }
+}
+.submit-post-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.submit-post-button{
+  padding: 0.5rem 1rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.error-specs-page {
+  background-color: black;
+  color: wheat;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.page-body {  
+ min-height: 100vh;
+ display: flex;
+ flex-flow: column;
+ background-color: rgb(247, 245, 245);
+ border-radius: 20px;
+ width: 95%;
+ max-width: 1100px;
+ margin: 1rem auto 0;
+ box-shadow: 0px 2px 3px 2px whitesmoke;
+}
+
+.blog-card {
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.651);
+  background-color: rgba(128, 128, 128, 0.219);
+  border-radius: 4px;
+  margin: 1rem;
+  height: 300px;
+  padding: 4px;
+}
+
+
+.blog-posts{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 320px;
+  border: 10px solid rgb(209, 209, 209);
+  border-top: 0;
+  flex-grow: 1;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .blog-posts{
+    grid-template-columns: 1fr;
+  }
+  .create-post-page-area{
+    width: 95%;
+    height: 70vh;
+  }
+  .title-container, .blog-text{
+    margin: 0;
+  }
+}
+
+.user-info-container {
+  font-size: 2rem;
+  text-align: center;
+  font-style: oblique;
+  font-weight: 300;
+}
+
+.login-with-google-btn {
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+
+  color: #fdfdfd;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color:#FF8A00;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+.login-body > div {
+  color: white;
+  font-size: 2rem;
+}
+
+.chat-bot-btn {
+  border: wheat;
+  font-size: large;
+  &:hover {
+    opacity: 0.5;
+  }
+  transition: all 0.3s;
+}
+
+.edit-btn{
+  font-size: large;
+}
+
+.edit-post-page {
+  color: whitesmoke;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+}
+.blog-text {
+  max-height: 100px;
+  overflow-y: auto; 
+}
+
+.comment {
+  color: white;
+}
+.commentSectionTitle{
+  color: white;
+}
+
+.image-container {
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.comments-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.comments-container {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: #fdfdfd solid;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.comments-content {
+  width: 100%;
+}
+
+.add-comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-comment-container input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.add-comment-container button {
+  padding: 5px 10px;
+}
+
+
+.image-container img {
+  width: 50%;
+  height: auto;
+  object-fit: contain; /* or 'cover' depending on your preference */
+}
